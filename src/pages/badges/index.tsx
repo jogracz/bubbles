@@ -5,9 +5,16 @@ import { badgesList } from "utilities/badges";
 
 import { Tile } from "./components/tile";
 
-export const Badges: React.FunctionComponent = () => {
+interface BadgesProps {
+  poppedCounter: number;
+}
+
+export const Badges: React.FunctionComponent<BadgesProps> = ({
+  poppedCounter,
+}) => {
   return (
     <StyledBadges>
+      <p>{poppedCounter}</p>
       {badgesList.map((badge) => (
         <Tile key={badge.name} badge={badge} />
       ))}
