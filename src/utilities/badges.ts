@@ -1,0 +1,26 @@
+import { Badge } from "types/badge";
+
+export const badgesList: Badge[] = [
+  { name: "Courageous Visitor", maxPoints: 1, currentPoints: 0 },
+  { name: "Fresh Morning", maxPoints: 1, currentPoints: 0 },
+  { name: "Tab Start", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 1, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 1, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+  { name: "Green Sailor", maxPoints: 3, currentPoints: 0 },
+];
