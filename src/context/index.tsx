@@ -32,13 +32,11 @@ export const AppProvider = (props: AppProviderProps) => {
   const [points, setPoints] = useState(0);
   // const [gameStarted, setGameStarted] = useState(false);
   // const [gameEnded, setGameEnded] = useState(false);
-  console.log(points);
+
   // const handleGameStart = () => {};
 
   const handleAddPoint = () => {
     setPoints((prev) => prev + 1);
-
-    console.log("ADD +1");
   };
 
   // const clearTimeouts = () => {

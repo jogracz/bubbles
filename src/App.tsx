@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 
@@ -10,8 +10,6 @@ import { Badges } from "./pages/badges";
 import { Navigation } from "./components/navigation";
 
 const App: React.FunctionComponent = () => {
-  const [poppedCounter, setPoppedCounter] = useState(0);
-
   return (
     <AppProvider>
       <StyledApp>
@@ -20,10 +18,7 @@ const App: React.FunctionComponent = () => {
           <Routes>
             <Route path="/" element={<Bubbles />} />
             <Route path="/about" element={<About />} />
-            <Route
-              path="/badges"
-              element={<Badges poppedCounter={poppedCounter} />}
-            />
+            <Route path="/badges" element={<Badges />} />
           </Routes>
         </StyledContent>
       </StyledApp>
