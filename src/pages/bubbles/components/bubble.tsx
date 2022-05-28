@@ -1,28 +1,30 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
-interface BubbleProp {
-  handleAdd: () => void;
-}
+import { useAppContext } from "context";
 
-export const Bubble: React.FunctionComponent<BubbleProp> = ({ handleAdd }) => {
+export const Bubble: React.FunctionComponent = () => {
   const [popped, setPopped] = useState(false);
+
+  const { handleAddPoint } = useAppContext();
 
   const handleClick = () => {
     setPopped(true);
-    // handleAdd();
+    handleAddPoint();
   };
 
-  return (
-    <StyledBubble
-      onClick={handleClick}
-      popped={popped}
-      left={randomFromRange(1, 80)}
-      top={randomFromRange(1, 80)}
-    >
-      <StyledBubbleInner size={randomFromRange(3, 100)} />
-    </StyledBubble>
-  );
+  return React.useMemo(() => {
+    return (
+      <StyledBubble
+        onClick={handleClick}
+        popped={popped}
+        left={randomFromRange(1, 80)}
+        top={randomFromRange(1, 80)}
+      >
+        <StyledBubbleInner size={randomFromRange(3, 100)} />
+      </StyledBubble>
+    );
+  }, [popped]);
 };
 
 const randomFromRange = (min: number, max: number) =>
