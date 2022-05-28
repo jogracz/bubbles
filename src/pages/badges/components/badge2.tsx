@@ -18,8 +18,6 @@ interface StyledBadgeProps {
 }
 
 const StyledBadge = styled.div`
-  /* height: 100px;
-  width: 50px; */
   width: 140px;
   height: 190px;
   border-radius: 8px;
