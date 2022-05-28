@@ -6,7 +6,7 @@ import { ROUTES } from "types/routes";
 
 export const Navigation: React.FunctionComponent = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
+
   return (
     <StyledNav>
       <StyledLink to={ROUTES.ABOUT} selected={pathname === ROUTES.ABOUT}>
@@ -27,11 +27,12 @@ const StyledNav = styled.div`
   display: flex;
   align-items: center;
 
-  font-weight: bold;
-  font-size: 20px;
-  color: #ffa8a8;
+  /* font-weight: bold; */
+  font-size: 3vmin;
+  /* color: #ffa8a8; */
+  box-shadow: -0px -0px 10px #eee;
   & a {
-    color: #ffa8a8;
+    color: #444;
   }
 `;
 interface StyledLinkProps {
@@ -40,11 +41,13 @@ interface StyledLinkProps {
 const StyledLink = styled(Link)`
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 2%;
   text-align: center;
+  border-left: 1px solid #eee;
   background-color: ${(props: StyledLinkProps) =>
-    props.selected ? "#B6FFCE" : "white"};
+    props.selected ? "#ffa8a8" : "white"};
+
   &:hover {
-    background-color: #b6ffce;
+    background-color: #ffa8a8;
   }
 `;
