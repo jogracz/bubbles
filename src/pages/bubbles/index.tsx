@@ -1,24 +1,15 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { Bubble } from "./components/bubble";
 
-interface BubblesProps {
-  setPoppedCounter: Dispatch<SetStateAction<number>>;
-}
-
-export const Bubbles: React.FunctionComponent<BubblesProps> = ({
-  setPoppedCounter,
-}) => {
+export const Bubbles: React.FunctionComponent = () => {
   const count = 26;
 
   return (
     <StyledBubbles>
       {[...Array(count)].map((bubble, index) => (
-        <Bubble
-          key={index}
-          handleAdd={() => setPoppedCounter((prev) => prev + 1)}
-        />
+        <Bubble key={index} />
       ))}
     </StyledBubbles>
   );

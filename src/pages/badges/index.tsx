@@ -1,22 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
+import { useAppContext } from "context";
 import { badgesList } from "utilities/badges";
 
 import { Tile } from "./components/tile";
 
-interface BadgesProps {
-  poppedCounter: number;
-}
-
-export const Badges: React.FunctionComponent<BadgesProps> = ({
-  poppedCounter,
-}) => {
+export const Badges: React.FunctionComponent = () => {
+  const { points } = useAppContext();
   return (
     <StyledBadges>
-      <p>{poppedCounter}</p>
-      {badgesList.map((badge) => (
-        <Tile key={badge.name} badge={badge} />
+      <p>{points}</p>
+      {badgesList.map((badge, index) => (
+        <Tile key={index} badge={badge} />
       ))}
     </StyledBadges>
   );
